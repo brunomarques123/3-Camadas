@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,35 @@ namespace Servico
 {
     public class DisciplinaServico
     {
-        private DisciplinaDal disciplinaDal = new DisciplinaDal();
+        private DisciplinaDal disciplinaDal;
 
-        public void Inserir (Disciplina disciplina)
+        public DisciplinaServico(SqlConnection connection)
         {
-            disciplinaDal.Inserir(disciplina);
+            disciplinaDal = new DisciplinaDal(connection);
         }
+
+
+        public void Gravar (Disciplina disciplina)
+        {
+            disciplinaDal.Gravar(disciplina);
+        }
+
 
         public List<Disciplina> ObterTodas()
         {
             return disciplinaDal.ObterTodas();
+        }
+
+
+        public Disciplina ObterPorId(long id)
+        {
+            return disciplinaDal.ObterPorId(id);
+        }
+
+
+        public void Remover(Disciplina disciplina)
+        {
+            disciplinaDal.Remover(disciplina);
         }
     }
 }
