@@ -64,7 +64,7 @@ namespace Persistencia
         public Disciplina ObterPorId(long id)
         {
             var disciplina = new Disciplina();
-            var command = new SqlCommand("select disciplinaid, nome, cargahoraria from DISCIPLINAS wherw disciplinasid = @disciplinaid", this.connection);
+            var command = new SqlCommand("select disciplinaid, nome, cargahoraria from DISCIPLINAS where disciplinaid = @disciplinaid", this.connection);
             command.Parameters.AddWithValue("@disciplinaid", id);
             connection.Open();
             using(SqlDataReader reader = command.ExecuteReader())
@@ -107,7 +107,7 @@ namespace Persistencia
         {
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = "delete from DISCIPLINAS where disciplinasid=@disciplinasid";
+            command.CommandText = "delete from DISCIPLINAS where disciplinaid=@disciplinaid";
             command.Parameters.AddWithValue("@disciplinaid", disciplina.DisciplinaId);
             command.ExecuteNonQuery();
             this.connection.Close();

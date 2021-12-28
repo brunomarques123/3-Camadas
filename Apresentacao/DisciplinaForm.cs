@@ -11,7 +11,8 @@ namespace Apresentacao
     {
 
         DisciplinaServico disciplinaServico;
-        string connetionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
+        string connetionString = 
+            "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='C:\\Users\\welli\\Desktop\\Pastas sobre C#\\LivroC#\\Projeto\\Modelo\\Persistencia\\App_Data\\ADO_NETDataBase.mdf';Integrated Security=True;";
 
         Disciplina disciplinaAtual = new Disciplina();
 

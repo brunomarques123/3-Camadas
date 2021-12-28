@@ -30,9 +30,9 @@ namespace Apresentacao
         private void InitializeComponent()
         {
             this.btn_Inserir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCargaHoraria = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.lbnCargaHoraria = new System.Windows.Forms.Label();
             this.dgvDisciplinas = new System.Windows.Forms.DataGridView();
             this.txtIDPesquisar = new System.Windows.Forms.TextBox();
@@ -52,12 +52,12 @@ namespace Apresentacao
             this.btn_Inserir.UseVisualStyleBackColor = true;
             this.btn_Inserir.Click += new System.EventHandler(this.btn_Inserir_Click);
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(58, 25);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(290, 23);
+            this.txtNome.TabIndex = 1;
             // 
             // txtCargaHoraria
             // 
@@ -66,14 +66,14 @@ namespace Apresentacao
             this.txtCargaHoraria.Size = new System.Drawing.Size(167, 23);
             this.txtCargaHoraria.TabIndex = 2;
             // 
-            // txtNome
+            // lblNome
             // 
-            this.txtNome.AutoSize = true;
-            this.txtNome.Location = new System.Drawing.Point(12, 28);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(43, 15);
-            this.txtNome.TabIndex = 3;
-            this.txtNome.Text = "Nome:";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(12, 28);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(43, 15);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "Nome:";
             // 
             // lbnCargaHoraria
             // 
@@ -140,9 +140,9 @@ namespace Apresentacao
             this.Controls.Add(this.txtIDPesquisar);
             this.Controls.Add(this.dgvDisciplinas);
             this.Controls.Add(this.lbnCargaHoraria);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtCargaHoraria);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btn_Inserir);
             this.Name = "DisciplinaForm";
             this.Text = "DisciplinaForm";
@@ -155,9 +155,9 @@ namespace Apresentacao
         #endregion
 
         private System.Windows.Forms.Button btn_Inserir;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCargaHoraria;
-        private System.Windows.Forms.Label txtNome;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lbnCargaHoraria;
         private System.Windows.Forms.DataGridView dgvDisciplinas;
         private System.Windows.Forms.TextBox txtIDPesquisar;
